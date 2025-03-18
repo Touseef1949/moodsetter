@@ -203,24 +203,24 @@ if st.button("Submit"):
     else:
         st.warning("Please enter both your name and your current mood!")
 
-st.subheader("📝 Journal Your Thoughts")
-journal_text = st.text_area("Write your thoughts here...")
-if st.button("Save Journal Entry"):
-    if journal_text:
-        st.session_state.journal_entries.append(journal_text)
-        st.success("Journal entry saved!")
-    else:
-        st.warning("Please write something in your journal before saving.")
+# st.subheader("📝 Journal Your Thoughts")
+# journal_text = st.text_area("Write your thoughts here...")
+# if st.button("Save Journal Entry"):
+#     if journal_text:
+#         st.session_state.journal_entries.append(journal_text)
+#         st.success("Journal entry saved!")
+#     else:
+#         st.warning("Please write something in your journal before saving.")
 
-if st.session_state.conversation_history:
-    st.subheader("🗒 Conversation History")
-    for entry in st.session_state.conversation_history:
-        st.write(f"**Name:** {entry['name']} | **Mood:** {entry['mood']}")
-        st.write(f"**AI Response:** {entry['ai_response']}")
-        st.write(f"**Quote:** {entry['quote']}")
-        st.write(f"**Daily Challenge:** {entry['challenge']}")
-        st.write(f"**Music Recommendation:** [Listen Here]({entry['music_link']})")
-        st.markdown("---")
+# if st.session_state.conversation_history:
+#     st.subheader("🗒 Conversation History")
+#     for entry in st.session_state.conversation_history:
+#         st.write(f"**Name:** {entry['name']} | **Mood:** {entry['mood']}")
+#         st.write(f"**AI Response:** {entry['ai_response']}")
+#         st.write(f"**Quote:** {entry['quote']}")
+#         st.write(f"**Daily Challenge:** {entry['challenge']}")
+#         st.write(f"**Music Recommendation:** [Listen Here]({entry['music_link']})")
+#         st.markdown("---")
 
 # --- Reset Button ---
 if st.button("Reset App"):
